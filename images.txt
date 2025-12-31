@@ -1,0 +1,8 @@
+images/
+├── kurte1_main.jpg
+├── kurte1_side.jpg
+├── kurte1_back.jpg
+├── jeyde1_main.jpg
+├── jeyde1_side.jpg
+├── storeA.jpg
+└── storeB.jpg
