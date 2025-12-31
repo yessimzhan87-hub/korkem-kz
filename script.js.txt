@@ -1,0 +1,55 @@
+let products = [];
+
+fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        displayProducts(products);
+    });
+
+document.getElementById('searchBtn').addEventListener('click', () => {
+    const age = document.getElementById('age-group').value;
+    const category = document.getElementById('category').value;
+    const brand = document.getElementById('brand').value;
+    const size = document.getElementById('size').value;
+    const keyword = document.getElementById('search').value.toLowerCase();
+
+    const filtered = products.filter(p => {
+        return (age === "" || p.age_group === age) &&
+               (category === "" || p.category === category) &&
+               (brand === "" || p.brand === brand) &&
+               (size === "" || p.sizes.includes(size)) &&
+               (keyword === "" || p.name.toLowerCase().includes(keyword));
+    });
+
+    displayProducts(filtered);
+});
+
+function displayProducts(list) {
+    const container = document.getElementById('products-container');
+    container.innerHTML = '';
+
+    list.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+
+        let imagesHTML = p.images.map(img => `<img src="${img}" alt="${p.name}">`).join('');
+
+        card.innerHTML = `
+            <div class="product-gallery">${imagesHTML}</div>
+            <div class="product-info">
+                <h3>${p.name}</h3>
+                <p>Категория: ${p.category}</p>
+                <p>Бренд: ${p.brand}</p>
+                <p>Өлшемдер: ${p.sizes.join(', ')}</p>
+                <p>Дүкен: ${p.store.name}</p>
+                <p>Мекенжай: ${p.store.address}</p>
+                <p>Телефон: ${p.store.phone}</p>
+                <a href="${p.store.map}" target="_blank">Google карта</a>
+                <br>
+                <button class="check-availability">Тауар бар ма?</button>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}

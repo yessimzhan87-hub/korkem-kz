@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-filters select,
+.search-filters input,
+.search-filters button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info h3 {
+    margin: 5px 0;
+}
+
+.product-info p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+button.check-availability {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button.check-availability:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .search-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+}

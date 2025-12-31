@@ -1,0 +1,51 @@
+html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korkem.kz - Киім іздеу</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Korkem.kz - Өскеменнің бренд киімдерін іздеу</h1>
+    <div class="search-filters">
+        <select id="age-group">
+            <option value="">Жастағы топ</option>
+            <option value="women">Әйелдер</option>
+            <option value="men">Ерлер</option>
+            <option value="kids">Балалар</option>
+            <option value="elder">Егде жастағы адамдар</option>
+        </select>
+        <select id="category">
+            <option value="">Категория</option>
+            <option value="jeyde">Жейде</option>
+            <option value="shalbar">Шалбар</option>
+            <option value="galstuk">Галстук</option>
+            <option value="kurte">Күрте</option>
+        </select>
+        <select id="brand">
+            <option value="">Бренд</option>
+            <option value="all">Барлығы</option>
+        </select>
+        <select id="size">
+            <option value="">Өлшем</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+        </select>
+        <input type="text" id="search" placeholder="Іздеу...">
+        <button id="searchBtn">Іздеу</button>
+    </div>
+</header>
+
+<main>
+    <div id="products-container">
+        <!-- Тауарлар жүктеледі -->
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

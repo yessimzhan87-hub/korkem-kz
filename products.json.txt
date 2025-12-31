@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Қара күрте",
+        "brand": "Барлығы",
+        "category": "kurte",
+        "age_group": "men",
+        "sizes": ["M", "L", "XL"],
+        "images": ["images/kurte1_main.jpg","images/kurte1_side.jpg","images/kurte1_back.jpg"],
+        "store": {
+            "name": "Дүкен А",
+            "address": "Өскемен, МКАД 12",
+            "phone": "+7 700 123 45 67",
+            "map": "https://goo.gl/maps/...",
+            "photo": "images/storeA.jpg"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Көк жейде",
+        "brand": "Барлығы",
+        "category": "jeyde",
+        "age_group": "women",
+        "sizes": ["S", "M", "L"],
+        "images": ["images/jeyde1_main.jpg","images/jeyde1_side.jpg"],
+        "store": {
+            "name": "Дүкен Б",
+            "address": "Өскемен, Гагарин 5",
+            "phone": "+7 700 765 43 21",
+            "map": "https://goo.gl/maps/...",
+            "photo": "images/storeB.jpg"
+        }
+    }
+]
